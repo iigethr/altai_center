@@ -1,0 +1,16 @@
+{
+  "name": "altai_center",
+  "title": "Altai Center",
+  "version": "0.0.3",
+  "description": "Center align a given element.",
+  "main": "dist/altai_center.js",
+  "dependencies": {
+    "jquery": "^3.0"
+  },
+  "repository": {
+    "url": "https://github.com/iigethr/altai_center",
+    "type": "git"
+  },
+  "author": "Team IIGETHR <wearesocial@iigethr.com>",
+  "license": "MIT"
+}
