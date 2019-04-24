@@ -1,7 +1,7 @@
 {
   "name": "altai_center",
   "title": "Altai Center",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Center align a given element.",
   "main": "dist/altai_center.js",
   "dependencies": {

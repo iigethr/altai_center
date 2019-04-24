@@ -6,44 +6,44 @@
  */
 
 // jQuery
-var jQuery;
+import $ from "jquery"
+import jQuery from "jquery"
 
-(function($, window, document) {
-  return $.fn.extend({
-    altaiCenter: function(options) {
-      // Variables
-      var action, log, settings;
-      var object = $(this);
+(($, window, document) => $.fn.extend({
+  altaiCenter(options) {
 
-      // Default settings
-      settings = {
-        debug: false
-      };
-      settings = $.extend(settings, options);
+    // Lets & Constants
+    let action
+    let log
+    let settings
+    const object = $(this)
 
-      // Log
-      log = function(message) {
-        if (settings.debug) {
-          if (typeof((console === "undefined") && (console === null))) {
-            return console.log(message);
-          } else {
-            return undefined;
-          }
-        } else {
-          return undefined;
-        }
-      };
+    // Settings
+    settings = {
+      debug: true
+    }
+    settings = $.extend(settings, options)
 
-      // Action
-      action = function() {
-        object.wrap("<div class='center-h-parent'><div class='center-h-child'></div></div>" );
-      };
-
-      // If object found run actions
-      if (object.length > 0) {
-        action();
-        log("Altai Center Activated");
+    // Log
+    log = message => {
+      if (settings.debug) {
+        return console.log(message)
+      } else {
+        return undefined
       }
     }
-  });
-})(jQuery, window, document);
+
+    // Action
+    action = () => {
+      object.each(function() {
+        $(this).wrap("<div class='center-h-parent'><div class='center-h-child'></div></div>")
+        log("Altai Center Activated!")
+      })
+    }
+
+    // If object found run actions
+    if (object.length > 0) {
+      action()
+    }
+  }
+}))(jQuery, window, document)
