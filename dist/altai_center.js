@@ -35,7 +35,7 @@ import jQuery from "jquery"
 
     // Action
     action = () => {
-      object.each(function() {
+      object.each( () => {
         $(this).wrap("<div class='center-h-parent'><div class='center-h-child'></div></div>")
         log("Altai Center Activated!")
       })
